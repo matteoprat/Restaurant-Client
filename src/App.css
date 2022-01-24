@@ -1,38 +1,317 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* DELETE WINDOW */
+
+#delete-window {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.delete-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  margin: 0 auto;
+  margin-top: calc(100vh - 85vh - 20px);
+  border: 3px solid red;
+  border-radius: 0.9em;
+  padding: 20px;
+  min-width: 30%;
+  width: auto;
+  height: 30%;
+  background-color: white;
+}
+
+.delete-row {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+/* RESERVATION WINDOW */
+#reservation-window {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.reservation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: calc(100vh - 85vh - 20px);
+  border: 3px solid navy;
+  border-radius: 0.9em;
+  padding: 20px;
+  min-width: 30%;
+  width: auto;
+  height: 30%;
+  background-color: white;
+}
+
+.reservation-row {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+/* ALERT WINDOW */
+
+.alert-window {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.inner-alert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 30%;
+  margin: 0 auto;
+  min-height: 10%;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.alert-warning {
+  border: 3px solid red;
+  border-radius: 0.9em;
+}
+
+.alert-info {
+  border: 3px solid darkgreen;
+  border-radius: 0.9em;
+}
+
+/* BUTTONS */
+
+button {
+  border: 1px solid black;
+  border-radius: 0.3em;
+  color: white;
+  text-align: center;
+  background-color: darkolivegreen;
+}
+
+.btn-edit {
+  background-color: darkorange;
+  color: black;
+}
+
+.btn-small {
+  width: 60px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.btn-delete {
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* TOP AREA */
+
+#header-section {
+  display: flex;
+  flex-direction: column;
+  background-color:darkseagreen;
+  position: absolute;
+  margin: auto;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#top-separator {
+  background-color: darkslategray;
+  width: 100%;
+  height: 6px;
 }
+
+/* CUSTOMER AREA */
+
+#customer-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  padding: 1em;
+  width: 80%;
+  background-color: #989c97;
+}
+
+#customer-box {
+  display: flex;
+  flex-direction: row;
+  margin:auto;
+  justify-content: auto;
+  align-items: center;
+  padding: 10px;
+}
+
+.customer-input {
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.customer-select {
+  margin-right: 9px;
+  margin-left: 9px;
+}
+
+.customer-button {
+  margin-left: 10px;
+}
+
+.customer-button-disabled {
+  background-color: gray;
+}
+
+/* TABLE */
+
+.tg  {
+  border-collapse:collapse;
+  border-spacing:0;
+  width: 80%;
+  margin-top: 5px;
+}
+.tg td{
+  border-color:black;
+  border-style:solid;
+  border-width:1px;
+  font-family:Arial, sans-serif;
+  font-size:16px;
+  width: 16%;
+  overflow:hidden;
+  padding:10px 5px;
+  word-break:normal;
+}
+.tg th{
+  border-color:black;
+  border-style:solid;
+  border-width:1px;
+  font-family:Arial, sans-serif;
+  font-size:16px;
+  font-weight:normal;
+  overflow:hidden;
+  padding:10px 5px;
+  word-break:normal;
+}
+.tg .tg-0pky{
+  border-color:inherit;
+  text-align:center;
+  vertical-align:top;
+  text-align:center;
+}
+.tg .tg-0lax{
+  text-align:center;
+  vertical-align:top
+}
+
+.table-detail {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.row-btn {
+  text-align: center;
+  width: 18%;
+}
+
+/* SEARCH DATE */
+
+#searchbox-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 11em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  background-color: darkseagreen;
+  height:auto;
+}
+
+#form1 {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 50%;
+  min-height: 60px;
+}
+
+.exlabel {
+  display: flex;
+  height: auto;
+  margin-left: 15px;
+  min-width: 15%;
+}
+
+.search {
+  width: fit-content;
+}
+
+.row-form {
+  display: flex;
+}
+
+
+select {
+  border: 1px solid black;
+  border-radius: 0.3em;
+  background-color: white;
+  text-align: center;
+  color: darkolivegreen;
+}
+
+.time {
+  width: 10%;
+}
+
+.warning {
+  color:red;
+}
+
